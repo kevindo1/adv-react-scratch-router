@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import Cards from '../components/Cards';
-import { getGhibli } from '../services/fetch';
+import Cards from '../../components/Cards/Cards';
+import { getGhibli } from '../../services/fetch';
 
 export default function Home() {
   const [ghiblis, setGhiblis] = useState([]);
@@ -10,6 +10,7 @@ export default function Home() {
     const fetchData = async () => {
       const data = await getGhibli();
       setGhiblis(data);
+      console.log(data);
       setLoading(false);
     };
     fetchData();
@@ -21,6 +22,7 @@ export default function Home() {
 
   return (
     <div>
+      <h1>Ghibli</h1>
       <Cards ghiblis={ghiblis}></Cards>
     </div>
   );

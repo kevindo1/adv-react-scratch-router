@@ -4,3 +4,10 @@ export async function getGhibli() {
 
   return data;
 }
+
+export async function getMovie(movieId) {
+  const response = await fetch(`https://ghibliapi.herokuapp.com/films/${movieId}`);
+  const data = await response.json();
+
+  return data;
+}

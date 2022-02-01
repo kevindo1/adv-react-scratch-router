@@ -1,20 +1,20 @@
 import './App.css';
-import Home from './views/Home';
+import Home from './views/Home/Home';
 import { Link, Route, BrowserRouter as Router, Switch } from 'react-router-dom';
+import Movie from './views/Movie/Movie';
 
 function App() {
   return (
     <div className="App">
       <Router>
-        <header>
-          <h1>Ghibli</h1>
-        </header>
-        <Route exact path="/">
-          <Home />
-        </Route>
-        {/* <Switch>
-          
-        </Switch> */}
+        <Switch>
+          <Route exact path="/">
+            <Home />
+          </Route>
+          <Route exact path="/:movieId">
+            <Movie />
+          </Route>
+        </Switch>
       </Router>
     </div>
   );
