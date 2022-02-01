@@ -12,7 +12,6 @@ export default function Movie() {
     const fetchData = async () => {
       const data = await getMovie(movieId);
       setMovieDetails(data);
-      console.log('details', movieDetails);
       setLoading(false);
     };
     fetchData();
@@ -29,7 +28,7 @@ export default function Movie() {
       <h1>{title}</h1>
       <img src={image} alt="movie image" />
       <p>Director: {director}</p>
-      <p>Description: {description}</p>
+      <p>{description}</p>
     </div>
   );
 }

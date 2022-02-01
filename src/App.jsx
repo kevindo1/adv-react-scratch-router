@@ -1,6 +1,6 @@
 import './App.css';
 import Home from './views/Home/Home';
-import { Link, Route, BrowserRouter as Router, Switch } from 'react-router-dom';
+import { Route, BrowserRouter as Router, Switch } from 'react-router-dom';
 import Movie from './views/Movie/Movie';
 
 function App() {
