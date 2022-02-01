@@ -13,7 +13,7 @@ function App() {
           <Home />
         </Route>
         {/* <Switch>
-          <Route exact path="/" component={Home} />
+          
         </Switch> */}
       </Router>
     </div>

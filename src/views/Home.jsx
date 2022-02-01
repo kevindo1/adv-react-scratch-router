@@ -3,7 +3,7 @@ import Cards from '../components/Cards';
 import { getGhibli } from '../services/fetch';
 
 export default function Home() {
-  const [ghiblis, setGhiblis] = useState({});
+  const [ghiblis, setGhiblis] = useState([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
