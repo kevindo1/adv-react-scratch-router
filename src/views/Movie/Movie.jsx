@@ -23,6 +23,11 @@ export default function Movie() {
     <h2>Loading</h2>;
   }
 
+  const handleClick = (e) => {
+    e.preventDefault();
+    history.push('/');
+  };
+
   const { title, image, director, description } = movieDetails;
 
   return (
@@ -31,7 +36,7 @@ export default function Movie() {
       <img src={image} alt="movie image" />
       <p>Director: {director}</p>
       <p>{description}</p>
-      <button>Back</button>
+      <button onClick={handleClick}>Back</button>
     </div>
   );
 }
