@@ -2,11 +2,13 @@ import React from 'react';
 import { useState, useEffect } from 'react';
 import { getMovie } from '../../services/fetch';
 import { useParams } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 
 export default function Movie() {
   const [movieDetails, setMovieDetails] = useState({});
   const [loading, setLoading] = useState(true);
   const { movieId } = useParams();
+  const history = useHistory();
 
   useEffect(() => {
     const fetchData = async () => {
@@ -29,6 +31,7 @@ export default function Movie() {
       <img src={image} alt="movie image" />
       <p>Director: {director}</p>
       <p>{description}</p>
+      <button>Back</button>
     </div>
   );
 }
