@@ -15,7 +15,7 @@ export default function Movie() {
       setLoading(false);
     };
     fetchData();
-  }, []);
+  }, [movieId]);
 
   if (loading) {
     <h2>Loading</h2>;
