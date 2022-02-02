@@ -15,7 +15,6 @@ export default function Movie() {
       const data = await getMovie(movieId);
       setMovieDetails(data);
       setLoading(false);
-      console.log(data);
     };
     fetchData();
   }, [movieId]);
