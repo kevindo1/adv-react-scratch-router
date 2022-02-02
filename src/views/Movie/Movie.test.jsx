@@ -27,9 +27,7 @@ test('Should be able to render Castle in the Sky', async () => {
   const heading = await screen.findByRole('heading', { name: /castle in the sky/i });
   const img = screen.getByRole('img', { name: /movie image/i });
   const director = screen.getByText(/director: hayao miyazaki/i);
-  const description = screen.getByText(
-    /the orphan sheeta inherited a mysterious crystal that links her to the mythical sky\-kingdom of laputa\. with the help of resourceful pazu and a rollicking band of sky pirates, she makes her way to the ruins of the once\-great civilization\. sheeta and pazu must outwit the evil muska, who plans to use laputa's science to make himself ruler of the world\./i
-  );
+  const description = screen.getByText(/the orphan/i);
 
   expect(heading).toBeInTheDocument();
   expect(img).toBeInTheDocument();
