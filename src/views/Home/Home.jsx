@@ -11,6 +11,7 @@ export default function Home() {
       const data = await getGhibli();
       setGhiblis(data);
       setLoading(false);
+      console.log(data);
     };
     fetchData();
   }, []);
