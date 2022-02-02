@@ -25,12 +25,12 @@ test('Should be able to render Castle in the Sky', async () => {
   );
 
   const heading = await screen.findByRole('heading', { name: /castle in the sky/i });
-  const img = screen.getByRole('img', { name: /movie image/i });
+  const image = screen.getByRole('img', { name: /movie image/i });
   const director = screen.getByText(/director: hayao miyazaki/i);
   const description = screen.getByText(/the orphan/i);
 
   expect(heading).toBeInTheDocument();
-  expect(img).toBeInTheDocument();
+  expect(image).toBeInTheDocument();
   expect(director).toBeInTheDocument();
   expect(description).toBeInTheDocument();
 });
