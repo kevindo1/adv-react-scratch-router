@@ -10,7 +10,7 @@ export default function Cards({ ghiblis }) {
           <div key={id} className="column">
             <li>{title}</li>
             <Link key={id} to={`/${id}`}>
-              <img src={image}></img>
+              <img src={image} alt="movie image"></img>
             </Link>
           </div>
         ))}

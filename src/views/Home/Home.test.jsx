@@ -1,4 +1,4 @@
-import { screen, render, container } from '@testing-library/react';
+import { screen, render } from '@testing-library/react';
 import Home from './Home';
 import { rest } from 'msw';
 import { setupServer } from 'msw/node';
@@ -19,6 +19,9 @@ afterAll(() => server.close());
 test('Should render home page views', async () => {
   render(<Home />);
 
+  const movieList = await screen.findByRole('list');
   const header = screen.getByRole('heading', { name: /ghibli/i });
+
+  expect(movieList).toBeInTheDocument();
   expect(header).toBeInTheDocument();
 });
