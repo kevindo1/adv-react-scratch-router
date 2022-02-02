@@ -20,8 +20,8 @@ test('Should render home page views', async () => {
   render(<Home />);
 
   const movieList = await screen.findByRole('list');
-  const header = screen.getByRole('heading', { name: /ghibli/i });
-
-  expect(movieList).toBeInTheDocument();
   expect(header).toBeInTheDocument();
+
+  const header = screen.getByRole('heading', { name: /ghibli/i });
+  expect(movieList).toBeInTheDocument();
 });
