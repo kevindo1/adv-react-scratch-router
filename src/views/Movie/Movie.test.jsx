@@ -3,6 +3,7 @@ import Movie from './Movie';
 import { rest } from 'msw';
 import { setupServer } from 'msw/node';
 import { castle } from '../../utils/castle';
+import { MemoryRouter } from 'react-router-dom';
 
 const server = setupServer(
   rest.get(`https://ghibliapi.herokuapp.com/films/:id`, (req, res, ctx) => {
@@ -16,8 +17,12 @@ beforeAll(() => server.listen());
 // 🚨 Close server when complete
 afterAll(() => server.close());
 
-test.skip('Should be able to render Castle in the Sky', async () => {
-  render(<Movie />);
+test('Should be able to render Castle in the Sky', async () => {
+  render(
+    <MemoryRouter>
+      <Movie />
+    </MemoryRouter>
+  );
 
   const heading = await screen.findByRole('heading', { name: /castle in the sky/i });
   const image = screen.getByRole('img', { name: /movie image/i });
