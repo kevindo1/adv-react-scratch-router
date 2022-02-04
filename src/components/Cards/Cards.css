@@ -1,0 +1,24 @@
+body {
+  background-color: #e3d4f0;
+}
+
+img {
+  width: 200px;
+  padding-top: 10px;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  font-size: 14px;
+  list-style-type: none;
+  font-style: sans-serif;
+}
