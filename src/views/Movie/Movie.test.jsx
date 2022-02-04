@@ -19,7 +19,7 @@ afterAll(() => server.close());
 
 test('Should be able to render Castle in the Sky', async () => {
   render(
-    <MemoryRouter>
+    <MemoryRouter initialEntries={['/2baf70d1-42bb-4437-b551-e5fed5a87abe']}>
       <Movie />
     </MemoryRouter>
   );
